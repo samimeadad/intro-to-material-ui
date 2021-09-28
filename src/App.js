@@ -1,23 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import { Button, Rating } from '@mui/material';
+import { Box } from '@mui/system';
+import Newspaper from './components/Newspaper/Newspaper';
 
-function App() {
+function App () {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Box sx={ { mx: "auto", width: 600, mt: 3 } }>
+        <Button variant="text">Text</Button>
+        <Button variant="contained">Contained</Button>
+        <Button variant="outlined">Outlined</Button>
+        <Rating name="read-only" value={ 4 } readOnly />
+      </Box>
+
+      <Newspaper></Newspaper>
     </div>
   );
 }
